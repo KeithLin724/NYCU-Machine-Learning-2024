@@ -1,0 +1,16 @@
+Name,Avg acc k=1,Avg acc k=3
+Sepal length,58.00%,62.67%
+Sepal width,46.00%,46.67%
+Petal length,93.33%,94.00%
+Petal width,95.33%,96.00%
+Sepal length x Sepal width,70.00%,74.67%
+Sepal length x Petal length,92.67%,92.67%
+Sepal length x Petal width,87.33%,94.00%
+Sepal width x Petal length,92.00%,92.00%
+Sepal width x Petal width,93.33%,95.33%
+Petal length x Petal width,95.33%,95.33%
+Sepal length x Sepal width x Petal length,92.67%,92.67%
+Sepal length x Sepal width x Petal width,92.67%,90.67%
+Sepal length x Petal length x Petal width,94.67%,95.33%
+Sepal width x Petal length x Petal width,96.67%,97.33%
+Sepal length x Sepal width x Petal length x Petal width,94.67%,94.00%
