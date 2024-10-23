@@ -13,6 +13,7 @@ rich = "^13.9.3"
 black = "^24.10.0"
 matplotlib = "^3.9.2"
 ipykernel = "^6.29.5"
+cvxpy = "^1.5.3"
 
 
 [build-system]
