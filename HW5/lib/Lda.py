@@ -58,6 +58,10 @@ class Lda(LdaTestAbc):
     def _build_mean_and_cov(data_in: np.ndarray):
         mean = np.mean(data_in, axis=0)
         cov = np.cov(data_in.T)
+
+        if isinstance(cov, np.ndarray):
+            cov = np.array([[cov]])
+
         return mean, cov
 
     def fit(self, data_in: pd.DataFrame, column_name: str = "Label") -> None:
@@ -93,15 +97,17 @@ class Lda(LdaTestAbc):
     def predict(self, x: np.ndarray) -> np.ndarray:
         return self._w.T @ x + self._b
 
-    def predict_with_df(self, x_df: pd.DataFrame) -> np.ndarray:
-        np_array = x_df.drop(columns=["Label"]).to_numpy().T
+    def predict_with_df(
+        self, x_df: pd.DataFrame, column_name: str = "Label"
+    ) -> np.ndarray:
+        np_array = x_df.drop(columns=[column_name]).to_numpy().T
         result = self.predict(np_array)
         arr_item = np.array([self._display_class[int(item)] for item in result > 0])
         return arr_item
 
-    def acc(self, x_df: pd.DataFrame) -> float:
-        predict_out = self.predict_with_df(x_df)
-        true_label = x_df["Label"].to_numpy()
+    def acc(self, x_df: pd.DataFrame, column_name: str = "Label") -> float:
+        predict_out = self.predict_with_df(x_df, column_name=column_name)
+        true_label = x_df[column_name].to_numpy()
 
         return np.mean(predict_out == true_label)
 
