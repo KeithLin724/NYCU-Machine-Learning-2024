@@ -59,7 +59,7 @@ class Lda(LdaTestAbc):
         mean = np.mean(data_in, axis=0)
         cov = np.cov(data_in.T)
 
-        if isinstance(cov, np.ndarray):
+        if len(cov.shape) == 0:
             cov = np.array([[cov]])
 
         return mean, cov
