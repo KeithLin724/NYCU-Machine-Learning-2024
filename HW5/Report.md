@@ -11,6 +11,8 @@ Implement two feature selection methods (Sequential Forward Selection and Fisher
 
 ## Report on Feature Selection Methods: Sequential Forward Selection and Fisher’s Criterion
 
+> Result in this [folder](./output/)
+
 ### 1. Which type of feature selection methods do Sequential Forward Selection and Fisher’s Criterion belong to among Filter-based and Wrapper-based methods?
 
 Sequential Forward Selection (SFS) is a **Wrapper-based** feature selection method. It evaluates feature subsets by iteratively adding features and assessing the performance using a specific learning algorithm.
