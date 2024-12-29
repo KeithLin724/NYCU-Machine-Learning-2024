@@ -1,0 +1,6 @@
+.vscode/
+.venv/
+*.pdf
+__pycache__/
+output/
+submit/
