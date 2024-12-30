@@ -1,6 +1,6 @@
 # NYCU Machine Learning HW1
 
-## Written By 3131511068 練鈞揚
+## Written By KYLiN
 
 ---
 

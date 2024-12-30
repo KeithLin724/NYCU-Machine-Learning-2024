@@ -1,6 +1,6 @@
 # NYCU Machine Learning 2024 : HW 5 Report
 
-> Written By 313511068 練鈞揚
+> Written By KYLiN
 ---
 
 ## Introduction
